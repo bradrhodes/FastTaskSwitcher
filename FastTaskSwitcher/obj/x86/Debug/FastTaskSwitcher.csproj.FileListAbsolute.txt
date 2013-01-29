@@ -1,0 +1,10 @@
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\bin\Debug\FastTaskSwitcher.exe
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\bin\Debug\FastTaskSwitcher.pdb
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\obj\x86\Debug\FastTaskSwitcher.AboutBox.resources
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\obj\x86\Debug\FastTaskSwitcher.Properties.Resources.resources
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\obj\x86\Debug\FastTaskSwitcher.TaskSearchForm.resources
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\obj\x86\Debug\FastTaskSwitcher.exe
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher\obj\x86\Debug\FastTaskSwitcher.pdb

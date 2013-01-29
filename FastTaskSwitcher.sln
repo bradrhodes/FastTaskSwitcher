@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher", "FastTaskSwitcher\FastTaskSwitcher.csproj", "{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher.Tests", "FastTaskSwitcher.Tests\FastTaskSwitcher.Tests.csproj", "{3C09960B-7550-47D4-8126-8D31CFAEF5EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C6DDD2AA-261F-4AA4-BE8F-4802962E6EA2}"
+	ProjectSection(SolutionItems) = preProject
+		FastTaskSwitcher.vsmdi = FastTaskSwitcher.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher.Tests.Integration", "FastTaskSwitcher.Tests.Integration\FastTaskSwitcher.Tests.Integration.csproj", "{5FD9D964-A673-446E-B028-C1621150BB37}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = FastTaskSwitcher.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Debug|x86.ActiveCfg = Debug|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Debug|x86.Build.0 = Debug|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Release|Any CPU.ActiveCfg = Release|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Release|Mixed Platforms.Build.0 = Release|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Release|x86.ActiveCfg = Release|x86
+		{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}.Release|x86.Build.0 = Release|x86
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3C09960B-7550-47D4-8126-8D31CFAEF5EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5FD9D964-A673-446E-B028-C1621150BB37}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

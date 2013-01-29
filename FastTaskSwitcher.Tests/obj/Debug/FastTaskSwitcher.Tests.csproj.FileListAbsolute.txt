@@ -1,0 +1,11 @@
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\bin\Debug\FastTaskSwitcher.Tests.dll
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\bin\Debug\FastTaskSwitcher.Tests.pdb
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\bin\Debug\Castle.Core.dll
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\bin\Debug\FakeItEasy.dll
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\bin\Debug\FastTaskSwitcher.exe
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\bin\Debug\FastTaskSwitcher.pdb
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\bin\Debug\Castle.Core.xml
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\bin\Debug\FakeItEasy.xml
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\obj\Debug\FastTaskSwitcher.Tests.dll
+C:\Dev\Random\FastTaskSwitcher\FastTaskSwitcher.Tests\obj\Debug\FastTaskSwitcher.Tests.pdb

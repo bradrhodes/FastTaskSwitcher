@@ -1,0 +1,360 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:AboutBox.Designer.cs" caret="0" fromTop="0" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskSearchForm.Designer.cs" caret="0" fromTop="0" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:AboutBox.cs" caret="346" fromTop="15" />
+      <File id="3C09960B-7550-47D4-8126-8D31CFAEF5EA/f:UnitTest1.cs" caret="0" fromTop="0" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/d:Properties/f:AssemblyInfo.cs" caret="1565" fromTop="38" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:ContextMenu.cs" caret="150" fromTop="7" />
+      <File id="5FD9D964-A673-446E-B028-C1621150BB37/f:TaskListTest.cs" caret="575" fromTop="21" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:Program.cs" caret="625" fromTop="21" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="1895" fromTop="37" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:ProcessInfo.cs" caret="941" fromTop="33" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:ITaskSearchWindow.cs" caret="220" fromTop="8" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskSearchForm.cs" caret="1756" fromTop="51" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:SysTrayIcon.cs" caret="1406" fromTop="47" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="350" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="5596" fromTop="24" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="6015" fromTop="33" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="5718" fromTop="27" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="4615" fromTop="11" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="54" fromTop="2" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="3833" fromTop="31" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="4041" fromTop="36" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="4339" fromTop="45" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="3553" fromTop="26" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="4477" fromTop="20" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="5709" fromTop="33" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="5878" fromTop="39" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="583" fromTop="16" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="4620" fromTop="18" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="4769" fromTop="23" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="2660" fromTop="14" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="5581" fromTop="41" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="1490" fromTop="38" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:WinApi.cs" caret="2037" fromTop="39" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:ProcessInfo.cs" caret="176" fromTop="5" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:ProcessInfo.cs" caret="1059" fromTop="34" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:ProcessInfo.cs" caret="292" fromTop="13" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:ProcessInfo.cs" caret="941" fromTop="33" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskSearchForm.cs" caret="2416" fromTop="26" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="1994" fromTop="47" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="1334" fromTop="32" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="1139" fromTop="27" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="1783" fromTop="33" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="2673" fromTop="22" />
+      <File id="0905F23E-3F99-4DBE-AFFB-59AF21B2FF16/f:TaskList.cs" caret="296" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="IDisposable`0" priority="31" />
+      <Item value="ctor" priority="255" />
+      <Item value="NotImplementedException`0" priority="31" />
+      <Item value="_ni" priority="287" />
+      <Item value="new" priority="1087" />
+      <Item value="NotifyIcon" priority="28" />
+      <Item value="Application`0" priority="127" />
+      <Item value="false" priority="95" />
+      <Item value="using" priority="62" />
+      <Item value="SysTrayProcess`0" priority="31" />
+      <Item value="SysTrayProcess" priority="28" />
+      <Item value="stp" priority="31" />
+      <Item value="MouseEventHandler" priority="28" />
+      <Item value="if" priority="223" />
+      <Item value="e" priority="31" />
+      <Item value="Right" priority="16" />
+      <Item value="niMouseClick`0" priority="31" />
+      <Item value="true" priority="95" />
+      <Item value="bool" priority="95" />
+      <Item value="public" priority="664" />
+      <Item value="ContextMenuStrip`0" priority="63" />
+      <Item value="ContextMenuStrip" priority="57" />
+      <Item value="ToolStripMenuItem`0" priority="127" />
+      <Item value="ToolStripSeparator`0" priority="26" />
+      <Item value="separator" priority="32" />
+      <Item value="ToolStripMenuItem" priority="87" />
+      <Item value="Text" priority="31" />
+      <Item value="about" priority="63" />
+      <Item value="EventHandler" priority="28" />
+      <Item value="menu" priority="191" />
+      <Item value="var" priority="511" />
+      <Item value="interface" priority="123" />
+      <Item value="void" priority="159" />
+      <Item value="object" priority="31" />
+      <Item value="EventArgs`0" priority="31" />
+      <Item value="class" priority="248" />
+      <Item value="IContextMenuItem`0" priority="124" />
+      <Item value="return" priority="447" />
+      <Item value="null" priority="159" />
+      <Item value="AboutBox" priority="28" />
+      <Item value="IContextMenuItemFactory`0" priority="31" />
+      <Item value="string" priority="255" />
+      <Item value="switch" priority="63" />
+      <Item value="menuItemName" priority="62" />
+      <Item value="case" priority="127" />
+      <Item value="ExitContextMenuItem" priority="28" />
+      <Item value="throw" priority="31" />
+      <Item value="ArgumentException" priority="28" />
+      <Item value="String`0" priority="127" />
+      <Item value="_contextMenuItemFactory" priority="63" />
+      <Item value="IContextMenuBuilder`0" priority="63" />
+      <Item value="_contextMenuBuilder" priority="63" />
+      <Item value="ContextMenuBuilder" priority="57" />
+      <Item value="ContextMenuItemFactory" priority="57" />
+      <Item value="this" priority="479" />
+      <Item value="event" priority="95" />
+      <Item value="EventHandler`0" priority="65" />
+      <Item value="IEnumerable" priority="223" />
+      <Item value="Where`1" priority="53" />
+      <Item value="x" priority="95" />
+      <Item value="p" priority="95" />
+      <Item value="IntPtr`0" priority="446" />
+      <Item value="ProcessInfo`0" priority="319" />
+      <Item value="Process`0" priority="95" />
+      <Item value="ProcessId" priority="63" />
+      <Item value="process" priority="159" />
+      <Item value="MainWindowHandle" priority="31" />
+      <Item value="str1" priority="31" />
+      <Item value="str2" priority="31" />
+      <Item value="ProcessName" priority="31" />
+      <Item value="Process" priority="31" />
+      <Item value="ProcessInfo" priority="116" />
+      <Item value="ITaskList`0" priority="63" />
+      <Item value="TaskSearchForm`0" priority="63" />
+      <Item value="_taskList" priority="191" />
+      <Item value="taskList" priority="31" />
+      <Item value="private" priority="223" />
+      <Item value="_runningTasks" priority="287" />
+      <Item value="BindingList&lt;ProcessInfo&gt;" priority="28" />
+      <Item value="TestClass" priority="31" />
+      <Item value="Assembly`0" priority="30" />
+      <Item value="InternalsVisibleTo" priority="61" />
+      <Item value="assembly" priority="30" />
+      <Item value="FastTaskSwitcher" priority="30" />
+      <Item value="taskListGetter" priority="26" />
+      <Item value="Assert`0" priority="31" />
+      <Item value="result" priority="191" />
+      <Item value="_taskListGetter" priority="31" />
+      <Item value="IList" priority="95" />
+      <Item value="_filteredRunningTasks" priority="191" />
+      <Item value="searchBox" priority="31" />
+      <Item value="SearchText" priority="63" />
+      <Item value="hWnd" priority="63" />
+      <Item value="SystemColorsChanged" priority="31" />
+      <Item value="Runtime" priority="26" />
+      <Item value="InteropServices" priority="26" />
+      <Item value="ShowWindow`0" priority="31" />
+      <Item value="TaskSearchForm" priority="28" />
+      <Item value="TaskListGetter" priority="28" />
+      <Item value="taskSearchForm" priority="31" />
+      <Item value="static" priority="62" />
+      <Item value="extern" priority="31" />
+      <Item value="List" priority="57" />
+      <Item value="EnumDelegate`0" priority="31" />
+      <Item value="int" priority="95" />
+      <Item value="StringBuilder`0" priority="63" />
+      <Item value="StringBuilder" priority="57" />
+      <Item value="GetWindowText`0" priority="31" />
+      <Item value="hwnd" priority="255" />
+      <Item value="strbTitle" priority="95" />
+      <Item value="IsWindowVisible`0" priority="31" />
+      <Item value="strTitle" priority="95" />
+      <Item value="collection" priority="31" />
+      <Item value="EnumDesktopWindows`0" priority="31" />
+      <Item value="foreach" priority="95" />
+      <Item value="processInfo" priority="351" />
+      <Item value="allProcesses" priority="31" />
+      <Item value="tempProcess" priority="95" />
+      <Item value="ITaskListGetter`0" priority="63" />
+      <Item value="uint" priority="63" />
+      <Item value="processId" priority="31" />
+      <Item value="internal" priority="30" />
+      <Item value="List&lt;ProcessInfo&gt;" priority="28" />
+      <Item value="Delegate`0" priority="28" />
+      <Item value="_applicationList" priority="127" />
+      <Item value="List&lt;IntPtr&gt;" priority="57" />
+      <Item value="_backgroundList" priority="95" />
+      <Item value="WinApi`0" priority="63" />
+      <Item value="EnumWindowsProc" priority="28" />
+      <Item value="enum" priority="30" />
+      <Item value="WindowType`0" priority="95" />
+      <Item value="windowType" priority="62" />
+      <Item value="Application" priority="16" />
+      <Item value="break" priority="63" />
+      <Item value="Background" priority="16" />
+      <Item value="sb" priority="95" />
+      <Item value="title" priority="63" />
+      <Item value="CreateTasksFromHwnd`0" priority="63" />
+      <Item value="CreateTaskList`0" priority="31" />
+      <Item value="continue" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="EnableVisualStyles`0" priority="26" />
+      <Item value="SetCompatibleTextRenderingDefault`0" priority="26" />
+      <Item value="Run`0" priority="26" />
+      <Item value="Exit`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.NotifyIcon">
+      <Item value="MouseClick" priority="27" />
+      <Item value="Dispose`0" priority="26" />
+      <Item value="Icon" priority="26" />
+      <Item value="Text" priority="26" />
+      <Item value="Visible" priority="26" />
+      <Item value="ContextMenuStrip" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MouseEventArgs">
+      <Item value="Button" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FastTaskSwitcher.Properties.Resources">
+      <Item value="FTS" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripMenuItem">
+      <Item value="Click" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ContextMenuStrip">
+      <Item value="Items" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripItemCollection">
+      <Item value="Add`0" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.AboutContextMenuItem">
+      <Item value="HandleClick`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.AboutBox">
+      <Item value="ShowDialog`0" priority="26" />
+      <Item value="Close`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.ExitContextMenuItem">
+      <Item value="HandleClick`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="26" />
+      <Item value="IsNullOrEmpty`0" priority="53" />
+      <Item value="Empty" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.IContextMenuItemFactory">
+      <Item value="GetMenuItem`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.IContextMenuItem">
+      <Item value="GetMenuItem`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.IContextMenuBuilder">
+      <Item value="BuildContextMenu`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.ContextMenu">
+      <Item value="Create`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.TaskSearchForm">
+      <Item value="searchBox" priority="26" />
+      <Item value="Close`0" priority="53" />
+      <Item value="listBox" priority="161" />
+      <Item value="Show`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Trim`0" priority="26" />
+      <Item value="Contains`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Process">
+      <Item value="GetProcesses`0" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.Process">
+      <Item value="MainModule" priority="26" />
+      <Item value="MainWindowHandle" priority="80" />
+      <Item value="ProcessName" priority="80" />
+      <Item value="MainWindowTitle" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IntPtr">
+      <Item value="Zero" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Select`2" priority="26" />
+      <Item value="ToList`1" priority="53" />
+      <Item value="FirstOrDefault`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.ITaskList">
+      <Item value="GetTaskList`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListBox">
+      <Item value="DataSource" priority="107" />
+      <Item value="SelectedItem" priority="53" />
+      <Item value="DisplayMember" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.TaskListGetter">
+      <Item value="GetTaskList`0" priority="26" />
+      <Item value="EnumWindowsProc`0" priority="27" />
+      <Item value="_applicationList" priority="26" />
+      <Item value="_backgroundList" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="IsNotNull`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.ITaskListGetter">
+      <Item value="GetTaskList`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="All`1" priority="26" />
+      <Item value="ToList`1" priority="53" />
+      <Item value="Where`1" priority="26" />
+      <Item value="Clear`0" priority="80" />
+      <Item value="Add`0" priority="80" />
+      <Item value="Union`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FastTaskSwitcher.ProcessInfo">
+      <Item value="MainWindowTitle" priority="80" />
+      <Item value="ProcessName" priority="80" />
+      <Item value="MainWindowHandle" priority="107" />
+      <Item value="Process" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MouseButtons">
+      <Item value="Left" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="Capacity" priority="53" />
+      <Item value="ToString`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FastTaskSwitcher.WinApi">
+      <Item value="EnumWindows`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FastTaskSwitcher.WindowType">
+      <Item value="Hidden" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <UnitTestSessions>
+    <Session>
+      <Name>Session #1</Name>
+      <Elements>
+        <UnitTestElement Provider="MSTest" Id="FastTaskSwitcher.Tests.Integration.TaskListGetterTest+WhenGettingTheTaskList" type="MsTestTestClassElement" TypeName="FastTaskSwitcher.Tests.Integration.TaskListGetterTest+WhenGettingTheTaskList" Project="5FD9D964-A673-446E-B028-C1621150BB37" />
+        <UnitTestElement Provider="MSTest" Id="FastTaskSwitcher.Tests.Integration.TaskListGetterTest+WhenGettingTheTaskList.ItShouldReturnAListOfAllRunningTasks" ParentId="FastTaskSwitcher.Tests.Integration.TaskListGetterTest+WhenGettingTheTaskList" type="MsTestTestMethodElement" MethodName="ItShouldReturnAListOfAllRunningTasks" Project="5FD9D964-A673-446E-B028-C1621150BB37" />
+      </Elements>
+    </Session>
+  </UnitTestSessions>
+</Configuration>

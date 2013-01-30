@@ -45,8 +45,22 @@ namespace FastTaskSwitcher
         {
             if (e.Button == MouseButtons.Left)
             {
-                var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
-                taskSearchForm.Show();
+                // Refactor: Form name should be retrieved from somewhere instead of being a string
+                var tsf = Application.OpenForms["TaskSearchForm"];
+                if (tsf == null)
+                {
+                    var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
+                    taskSearchForm.Show();
+                    return;
+                }
+
+                tsf.Focus();
+                ((TaskSearchForm)tsf).SetForeground();
+
+
+                // Deprecated
+//                var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
+//                taskSearchForm.Show();
             }
         }
     }

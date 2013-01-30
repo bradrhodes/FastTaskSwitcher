@@ -16,8 +16,24 @@ namespace FastTaskSwitcher
         private IList<ProcessInfo> _runningTasks;
         private IList<ProcessInfo> _filteredRunningTasks; 
 
+        // Refactor: These should be moved to the WinApi static class
         [DllImport("user32.dll")]
            private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        [DllImport("user32.dll")]
+        private static extern IntPtr GetForegroundWindow();
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr GetWindowThreadProcessId(IntPtr hWnd, out IntPtr ProcessId);
+
+        [DllImport("user32.dll")]
+        private static extern IntPtr AttachThreadInput(IntPtr idAttach, IntPtr idAttachTo, int fAttach);
+
+        [DllImport("Kernel32.dll")]
+        private static extern IntPtr GetCurrentThreadId();
+
+        [DllImport("user32.dll")]
+        private static extern bool SetForegroundWindow(IntPtr hWnd);
 
         private TaskSearchForm()
         {
@@ -42,7 +58,14 @@ namespace FastTaskSwitcher
             _runningTasks = _taskListGetter.GetTaskList().ToList();
             _filteredRunningTasks = _runningTasks.ToList();
 
-            this.listBox.DataSource = _filteredRunningTasks; 
+            this.listBox.DataSource = _filteredRunningTasks;
+
+            SetForeground();
+        }
+
+        public void SetForeground()
+        {
+            SetForegroundWindow(this.Handle);
         }
 
         public event EventHandler SearchEvent;
@@ -56,9 +79,34 @@ namespace FastTaskSwitcher
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            if (this.listBox.SelectedItem == null)
+            {
+                this.Close();
+                return;
+            }
+
             var hWnd = ((ProcessInfo) this.listBox.SelectedItem).MainWindowHandle;
 
             ShowWindow(hWnd, 9);
+
+            if(hWnd == GetForegroundWindow())
+                return;
+
+            IntPtr thread1 = GetCurrentThreadId();
+            IntPtr process2;
+            IntPtr thread2 = GetWindowThreadProcessId(hWnd, out process2);
+
+            if (thread1 != thread2)
+            {
+                AttachThreadInput(thread1, thread2, 1);
+                SetForegroundWindow(hWnd);
+                AttachThreadInput(thread1, thread2, 0);
+            }
+            else
+            {
+                SetForegroundWindow(hWnd);
+            }
+
             this.Close();
         }
 
@@ -69,7 +117,12 @@ namespace FastTaskSwitcher
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            _filteredRunningTasks = _runningTasks.Where(x => x.MainWindowTitle.Contains(SearchText) /* | x.ProcessName.Contains(SearchText) Deprecated */).ToList();
+//            _filteredRunningTasks = _runningTasks.Where(x => x.MainWindowTitle.Contains(SearchText) /* | x.ProcessName.Contains(SearchText) Deprecated */).ToList(); // Deprecated
+            // Case-insesitive search
+            _filteredRunningTasks =
+                _runningTasks.Where(
+                    x => x.MainWindowTitle.IndexOf(SearchText, StringComparison.CurrentCultureIgnoreCase) >= 0).ToList();
+
             this.listBox.DataSource = _filteredRunningTasks;
         }
     }

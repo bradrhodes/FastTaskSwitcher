@@ -47,6 +47,18 @@ namespace FastTaskSwitcher
         ExactSpelling = false, CharSet = CharSet.Auto, SetLastError = true)]
         public static extern int GetWindowText(IntPtr hWnd, StringBuilder lpWindowText, int nMaxCount);
 
+        // Note: Below this are new
+        [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
+        public static extern IntPtr GetAncestor(IntPtr hWnd, int flags);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
+        public static extern IntPtr GetLastActivePopup(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool IsWindowVisible(IntPtr hWnd);
+
+
         public static IntPtr GetWindowLongPtr(IntPtr hWnd, WindowLong nIndex)
         {
             if (IntPtr.Size == 8)

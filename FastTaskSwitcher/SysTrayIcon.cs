@@ -45,7 +45,7 @@ namespace FastTaskSwitcher
         {
             if (e.Button == MouseButtons.Left)
             {
-                var taskSearchForm = new TaskSearchForm(new TaskListGetter());
+                var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
                 taskSearchForm.Show();
             }
         }

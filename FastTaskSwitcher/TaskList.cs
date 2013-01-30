@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -10,6 +11,58 @@ namespace FastTaskSwitcher
     public interface ITaskListGetter
     {
         IEnumerable<ProcessInfo> GetTaskList();
+    }
+
+    class EasierTaskListGetter : ITaskListGetter
+    {
+        private IList<ProcessInfo> _taskList;
+
+        public EasierTaskListGetter()
+        {
+            _taskList = new List<ProcessInfo>();
+        }
+
+        public IEnumerable<ProcessInfo> GetTaskList()
+        {
+            _taskList.Clear();
+
+            WinApi.EnumWindows(new WinApi.EnumWindowsProc(EnumWindowsProc), IntPtr.Zero);
+
+            return _taskList;
+        }
+
+        private bool EnumWindowsProc(IntPtr hwnd, IntPtr param)
+        {
+            if (!IsAltTabWindow(hwnd))
+                return true;
+
+            StringBuilder sb = new StringBuilder(255);
+            int nLength = WinApi.GetWindowText(hwnd, sb, sb.Capacity + 1);
+            string title = sb.ToString();
+
+            if(String.IsNullOrEmpty(title))
+                return true;
+
+            _taskList.Add(new ProcessInfo() { MainWindowHandle = hwnd, MainWindowTitle = title });
+
+            return true;
+        }
+
+        private bool IsAltTabWindow(IntPtr hwnd)
+        {
+            IntPtr hwndWalk = WinApi.GetAncestor(hwnd, 3);
+
+            IntPtr hwndTry;
+
+            while ((hwndTry = WinApi.GetLastActivePopup(hwndWalk)) != hwndTry)
+            {
+                if (WinApi.IsWindowVisible(hwndTry))
+                    break;
+                hwndWalk = hwndTry;
+            }
+
+            return hwndWalk == hwnd;
+        }
     }
 
     internal class TaskListGetter : ITaskListGetter

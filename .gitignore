@@ -1,0 +1,16 @@
+.DS_Store
+._*
+TestResults
+*Resharper*
+**.ReSharper**
+**\_ReSharper.**
+*.bak
+*.cache
+*.resharperoptions
+*.suo
+*.user
+*.vsprops
+*/TestResults
+*\bin*
+*\obj*
+_ReSharper.*

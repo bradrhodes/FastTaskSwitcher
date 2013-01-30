@@ -43,25 +43,64 @@ namespace FastTaskSwitcher
             if(String.IsNullOrEmpty(title))
                 return true;
 
-            _taskList.Add(new ProcessInfo() { MainWindowHandle = hwnd, MainWindowTitle = title });
+            var processInfo = new ProcessInfo() {MainWindowHandle = hwnd, MainWindowTitle = title};
+
+            if(RunFilters(processInfo))
+                _taskList.Add(processInfo);
+
+            return true;
+        }
+
+        // Refactor: Abstract this into Chain of Responsibility or something similar
+        private bool RunFilters(ProcessInfo processInfo)
+        {
+            if(processInfo.MainWindowTitle.Trim() == "Program Manager")
+                return false;
 
             return true;
         }
 
         private bool IsAltTabWindow(IntPtr hwnd)
         {
-            IntPtr hwndWalk = WinApi.GetAncestor(hwnd, 3);
+            // The desktop shouldn't be in the list
+//            if(hwnd == WinApi.GetShellWindow())
+//                return false;
 
-            IntPtr hwndTry;
 
-            while ((hwndTry = WinApi.GetLastActivePopup(hwndWalk)) != hwndTry)
+
+            IntPtr rootWindow = WinApi.GetAncestor(hwnd, 3);
+
+            if (WalkToParent(rootWindow) == hwnd)
             {
-                if (WinApi.IsWindowVisible(hwndTry))
-                    break;
-                hwndWalk = hwndTry;
+                return true;
             }
+            return false;
 
-            return hwndWalk == hwnd;
+            // IntPtr hwndTry; // Deprecated
+
+
+            // Deprecated
+//            while ((hwndTry = WinApi.GetLastActivePopup(hwndWalk)) != hwndTry)
+//            {
+//                if (WinApi.IsWindowVisible(hwndTry))
+//                    break;
+//                hwndWalk = hwndTry;
+//            }
+//
+//            return hwndWalk == hwnd;
+        }
+
+        private static IntPtr WalkToParent(IntPtr hwnd)
+        {
+            IntPtr lastPopup = WinApi.GetLastActivePopup(hwnd);
+
+            if(WinApi.IsWindowVisible(lastPopup))
+                return lastPopup;
+
+            if(lastPopup == hwnd)
+                return IntPtr.Zero;
+
+            return WalkToParent(lastPopup);
         }
     }
 

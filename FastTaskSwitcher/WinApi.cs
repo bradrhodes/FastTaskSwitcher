@@ -58,6 +58,9 @@ namespace FastTaskSwitcher
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool IsWindowVisible(IntPtr hWnd);
 
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern IntPtr GetShellWindow();
 
         public static IntPtr GetWindowLongPtr(IntPtr hWnd, WindowLong nIndex)
         {

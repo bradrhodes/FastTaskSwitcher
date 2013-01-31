@@ -104,153 +104,154 @@ namespace FastTaskSwitcher
         }
     }
 
-    internal class TaskListGetter : ITaskListGetter
-    {
-        private IList<ProcessInfo> _taskList;
-
-        private IList<IntPtr> _applicationList;
-        private IList<IntPtr> _backgroundList;
-
-        public TaskListGetter()
-        {
-            _taskList = new List<ProcessInfo>();
-            _applicationList = new List<IntPtr>();
-            _backgroundList = new List<IntPtr>();
-        }
-
-        public IEnumerable<ProcessInfo> GetTaskList()
-        {
-            // Clear out the task list
-            _taskList.Clear();
-            _applicationList.Clear();
-            _backgroundList.Clear();
-
-            // Call the WinAPI to enumerate the windows
-            WinApi.EnumWindows(new WinApi.EnumWindowsProc(EnumWindowsProc), IntPtr.Zero);
-
-            CreateTaskList();
-
-            return _taskList;
-        }
-
-        // Refactor: Abstract
-        private void CreateTaskList()
-        {
-            CreateTasksFromHwnd(_applicationList);
-            CreateTasksFromHwnd(_backgroundList);
-        }
-
-        // Refactor: Abstract
-        private void CreateTasksFromHwnd(IEnumerable<IntPtr> list)
-        {
-            foreach (var hwnd in list)
-            {
-                StringBuilder sb = new StringBuilder(255);
-                int nLength = WinApi.GetWindowText(hwnd, sb, sb.Capacity + 1);
-                string title = sb.ToString();
-
-                if(String.IsNullOrEmpty(title))
-                    continue;
-
-                var processInfo = new ProcessInfo();
-                processInfo.MainWindowHandle = hwnd;
-                processInfo.MainWindowTitle = title;
-
-                _taskList.Add(processInfo);
-            }
-        }
-
-        // Refactor: Abstract this
-        private bool EnumWindowsProc(IntPtr hwnd, IntPtr param)
-        {
-            // Todo: Enumerate the windows
-            var windowType = GetWindowType(hwnd);
-
-            switch (windowType)
-            {
-                case WindowTypes.Application:
-                    this._applicationList.Add(hwnd);
-                    break;
-                case WindowTypes.Background:
-                    this._backgroundList.Add(hwnd);
-                    break;
-            }
-            return true;
-        }
-
-        // Refactor: Copied this code from Switcher, refactor to be easier to read
-        private WindowTypes GetWindowType(IntPtr hwnd)
-        {
-            var windowType = WindowTypes.Hidden;
-            WinApi.WindowStyles windowStyles =
-                (WinApi.WindowStyles) ((int) WinApi.GetWindowLongPtr(hwnd, WinApi.WindowLong.Style));
-            WinApi.WindowExStyles windowExStyles =
-                (WinApi.WindowExStyles) ((int) WinApi.GetWindowLongPtr(hwnd, WinApi.WindowLong.ExStyle));
-
-            if ((windowStyles & WinApi.WindowStyles.Visible) == WinApi.WindowStyles.Visible &&
-                (windowStyles & WinApi.WindowStyles.Disabled) == WinApi.WindowStyles.None)
-            {
-                if ((windowExStyles & WinApi.WindowExStyles.AppWindow) == WinApi.WindowExStyles.AppWindow)
-                {
-                    if (IsScreenVisible(hwnd))
-                    {
-                        windowType = WindowTypes.Application;
-                    }
-                }
-                else
-                {
-                    if ((windowExStyles & WinApi.WindowExStyles.ToolWindow) == (WinApi.WindowExStyles) 0u)
-                    {
-                        windowType = WindowTypes.Application;
-                    }
-                    else
-                    {
-                        windowType = WindowTypes.Background;
-                    }
-                    if ((windowExStyles & WinApi.WindowExStyles.NoActivate) == WinApi.WindowExStyles.NoActivate)
-                    {
-                        windowType = WindowTypes.Hidden;
-                    }
-                    if (windowType != WindowTypes.Hidden)
-                    {
-                        IntPtr window = WinApi.GetWindow(hwnd, WinApi.GetWindowMode.Owner);
-                        if (window != IntPtr.Zero &&
-                            GetWindowType(window) == WindowTypes.Application)
-                        {
-                            windowType = WindowTypes.Hidden;
-                        }
-                    }
-                    if (windowType != WindowTypes.Hidden && !IsScreenVisible(hwnd))
-                    {
-                        windowType = WindowTypes.Hidden;
-                    }
-                    uint num;
-                    byte b;
-                    WinApi.LayeredWindowFlags layeredWindowFlags;
-                    if (windowType != WindowTypes.Hidden &&
-                        (windowExStyles & WinApi.WindowExStyles.Layered) == WinApi.WindowExStyles.Layered &&
-                        WinApi.GetLayeredWindowAttributes(hwnd, out num, out b, out layeredWindowFlags) &&
-                        (layeredWindowFlags & WinApi.LayeredWindowFlags.Alpha) == WinApi.LayeredWindowFlags.Alpha &&
-                        b == 0)
-                    {
-                        windowType = WindowTypes.Hidden;
-                    }
-                }
-            }
-            return windowType;
-        }
-
-        private static bool IsScreenVisible(IntPtr hwnd)
-        {
-            bool result = false;
-            WinApi.Rect rect;
-            if (WinApi.GetWindowRect(hwnd, out rect) && WinApi.MonitorFromWindow(hwnd, WinApi.MonitorFromWindowFlags.DefaultToNull) != IntPtr.Zero && rect.Width > 0 && rect.Height > 0)
-            {
-                result = true;
-            }
-            return result;
-        }
-    }
+    // Deprecated
+//    internal class TaskListGetter : ITaskListGetter
+//    {
+//        private IList<ProcessInfo> _taskList;
+//
+//        private IList<IntPtr> _applicationList;
+//        private IList<IntPtr> _backgroundList;
+//
+//        public TaskListGetter()
+//        {
+//            _taskList = new List<ProcessInfo>();
+//            _applicationList = new List<IntPtr>();
+//            _backgroundList = new List<IntPtr>();
+//        }
+//
+//        public IEnumerable<ProcessInfo> GetTaskList()
+//        {
+//            // Clear out the task list
+//            _taskList.Clear();
+//            _applicationList.Clear();
+//            _backgroundList.Clear();
+//
+//            // Call the WinAPI to enumerate the windows
+//            WinApi.EnumWindows(new WinApi.EnumWindowsProc(EnumWindowsProc), IntPtr.Zero);
+//
+//            CreateTaskList();
+//
+//            return _taskList;
+//        }
+//
+//        // Refactor: Abstract
+//        private void CreateTaskList()
+//        {
+//            CreateTasksFromHwnd(_applicationList);
+//            CreateTasksFromHwnd(_backgroundList);
+//        }
+//
+//        // Refactor: Abstract
+//        private void CreateTasksFromHwnd(IEnumerable<IntPtr> list)
+//        {
+//            foreach (var hwnd in list)
+//            {
+//                StringBuilder sb = new StringBuilder(255);
+//                int nLength = WinApi.GetWindowText(hwnd, sb, sb.Capacity + 1);
+//                string title = sb.ToString();
+//
+//                if(String.IsNullOrEmpty(title))
+//                    continue;
+//
+//                var processInfo = new ProcessInfo();
+//                processInfo.MainWindowHandle = hwnd;
+//                processInfo.MainWindowTitle = title;
+//
+//                _taskList.Add(processInfo);
+//            }
+//        }
+//
+//        // Refactor: Abstract this
+//        private bool EnumWindowsProc(IntPtr hwnd, IntPtr param)
+//        {
+//            // Todo: Enumerate the windows
+//            var windowType = GetWindowType(hwnd);
+//
+//            switch (windowType)
+//            {
+//                case WindowTypes.Application:
+//                    this._applicationList.Add(hwnd);
+//                    break;
+//                case WindowTypes.Background:
+//                    this._backgroundList.Add(hwnd);
+//                    break;
+//            }
+//            return true;
+//        }
+//
+//        // Refactor: Copied this code from Switcher, refactor to be easier to read
+//        private WindowTypes GetWindowType(IntPtr hwnd)
+//        {
+//            var windowType = WindowTypes.Hidden;
+//            WinApi.WindowStyles windowStyles =
+//                (WinApi.WindowStyles) ((int) WinApi.GetWindowLongPtr(hwnd, WinApi.WindowLong.Style));
+//            WinApi.WindowExStyles windowExStyles =
+//                (WinApi.WindowExStyles) ((int) WinApi.GetWindowLongPtr(hwnd, WinApi.WindowLong.ExStyle));
+//
+//            if ((windowStyles & WinApi.WindowStyles.Visible) == WinApi.WindowStyles.Visible &&
+//                (windowStyles & WinApi.WindowStyles.Disabled) == WinApi.WindowStyles.None)
+//            {
+//                if ((windowExStyles & WinApi.WindowExStyles.AppWindow) == WinApi.WindowExStyles.AppWindow)
+//                {
+//                    if (IsScreenVisible(hwnd))
+//                    {
+//                        windowType = WindowTypes.Application;
+//                    }
+//                }
+//                else
+//                {
+//                    if ((windowExStyles & WinApi.WindowExStyles.ToolWindow) == (WinApi.WindowExStyles) 0u)
+//                    {
+//                        windowType = WindowTypes.Application;
+//                    }
+//                    else
+//                    {
+//                        windowType = WindowTypes.Background;
+//                    }
+//                    if ((windowExStyles & WinApi.WindowExStyles.NoActivate) == WinApi.WindowExStyles.NoActivate)
+//                    {
+//                        windowType = WindowTypes.Hidden;
+//                    }
+//                    if (windowType != WindowTypes.Hidden)
+//                    {
+//                        IntPtr window = WinApi.GetWindow(hwnd, WinApi.GetWindowMode.Owner);
+//                        if (window != IntPtr.Zero &&
+//                            GetWindowType(window) == WindowTypes.Application)
+//                        {
+//                            windowType = WindowTypes.Hidden;
+//                        }
+//                    }
+//                    if (windowType != WindowTypes.Hidden && !IsScreenVisible(hwnd))
+//                    {
+//                        windowType = WindowTypes.Hidden;
+//                    }
+//                    uint num;
+//                    byte b;
+//                    WinApi.LayeredWindowFlags layeredWindowFlags;
+//                    if (windowType != WindowTypes.Hidden &&
+//                        (windowExStyles & WinApi.WindowExStyles.Layered) == WinApi.WindowExStyles.Layered &&
+//                        WinApi.GetLayeredWindowAttributes(hwnd, out num, out b, out layeredWindowFlags) &&
+//                        (layeredWindowFlags & WinApi.LayeredWindowFlags.Alpha) == WinApi.LayeredWindowFlags.Alpha &&
+//                        b == 0)
+//                    {
+//                        windowType = WindowTypes.Hidden;
+//                    }
+//                }
+//            }
+//            return windowType;
+//        }
+//
+//        private static bool IsScreenVisible(IntPtr hwnd)
+//        {
+//            bool result = false;
+//            WinApi.Rect rect;
+//            if (WinApi.GetWindowRect(hwnd, out rect) && WinApi.MonitorFromWindow(hwnd, WinApi.MonitorFromWindowFlags.DefaultToNull) != IntPtr.Zero && rect.Width > 0 && rect.Height > 0)
+//            {
+//                result = true;
+//            }
+//            return result;
+//        }
+//    }
 
 
     // Cleanup

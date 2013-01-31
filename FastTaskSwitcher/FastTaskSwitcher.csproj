@@ -53,6 +53,8 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="ContextMenu.cs" />
+    <Compile Include="HotKeyManager.cs" />
+    <Compile Include="IHotKeyManager.cs" />
     <Compile Include="ITaskSearchWindow.cs" />
     <Compile Include="ProcessInfo.cs" />
     <Compile Include="Program.cs" />

@@ -11,6 +11,8 @@ namespace FastTaskSwitcher
     {
         private readonly IContextMenuBuilder _contextMenuBuilder;
         private NotifyIcon _ni;
+        private int _hotKeyId;
+
 
         public SysTrayIcon(IContextMenuBuilder contextMenuBuilder) : this()
         {
@@ -20,17 +22,19 @@ namespace FastTaskSwitcher
         private SysTrayIcon()
         {
             _ni = new NotifyIcon();
+            RegisterHotKey();
         }
 
         public void Dispose()
         {
+            UnregisterHotKey();
             _ni.Dispose();
         }
 
         public void Display()
         {
             // Attach Left-Click Event
-            _ni.MouseClick += new MouseEventHandler(niMouseClick);
+            _ni.MouseClick += new MouseEventHandler(niMouseClickCallback);
 
             _ni.Icon = Resources.FTS;
             _ni.Text = "Fast Task Switcher";
@@ -41,27 +45,49 @@ namespace FastTaskSwitcher
             _contextMenuBuilder.BuildContextMenu(_ni.ContextMenuStrip);
         }
 
-        private void niMouseClick(object sender, MouseEventArgs e)
+        private void RegisterHotKey()
+        {
+            // Refactor: Make HotKeyManager non-static so that it can be injected here instead
+            _hotKeyId = HotKeyManager.RegisterHotKey(0x60, KeyModifiers.Alt | KeyModifiers.NoRepeat);
+            HotKeyManager.HotKeyPressed += new EventHandler<HotKeyEventArgs>(HotKeyEventCallback);
+        }
+
+        private void UnregisterHotKey()
+        {
+            HotKeyManager.UnregisterHotKey(_hotKeyId);
+        }
+
+        private void niMouseClickCallback(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                // Refactor: Form name should be retrieved from somewhere instead of being a string
-                var tsf = Application.OpenForms["TaskSearchForm"];
-                if (tsf == null)
-                {
-                    var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
-                    taskSearchForm.Show();
-                    return;
-                }
-
-                tsf.Focus();
-                ((TaskSearchForm)tsf).SetForeground();
+                PopSearchForm();
 
 
                 // Deprecated
 //                var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
 //                taskSearchForm.Show();
             }
+        }
+
+        private void HotKeyEventCallback(object sender, HotKeyEventArgs e)
+        {
+            PopSearchForm();
+        }
+
+        private static void PopSearchForm()
+        {
+            // Refactor: Form name should be retrieved from somewhere instead of being a string
+            var tsf = Application.OpenForms["TaskSearchForm"];
+            if (tsf == null)
+            {
+                var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
+                taskSearchForm.Show();
+                return;
+            }
+
+            tsf.Focus();
+            ((TaskSearchForm)tsf).SetForeground();
         }
     }
 }

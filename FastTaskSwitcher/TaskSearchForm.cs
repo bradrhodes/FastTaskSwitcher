@@ -16,25 +16,6 @@ namespace FastTaskSwitcher
         private IList<ProcessInfo> _runningTasks;
         private IList<ProcessInfo> _filteredRunningTasks; 
 
-        // Refactor: These should be moved to the WinApi static class
-        [DllImport("user32.dll")]
-           private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-
-        [DllImport("user32.dll")]
-        private static extern IntPtr GetForegroundWindow();
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern IntPtr GetWindowThreadProcessId(IntPtr hWnd, out IntPtr ProcessId);
-
-        [DllImport("user32.dll")]
-        private static extern IntPtr AttachThreadInput(IntPtr idAttach, IntPtr idAttachTo, int fAttach);
-
-        [DllImport("Kernel32.dll")]
-        private static extern IntPtr GetCurrentThreadId();
-
-        [DllImport("user32.dll")]
-        private static extern bool SetForegroundWindow(IntPtr hWnd);
-
         private TaskSearchForm()
         {
             InitializeComponent();
@@ -65,7 +46,7 @@ namespace FastTaskSwitcher
 
         public void SetForeground()
         {
-            SetForegroundWindow(this.Handle);
+            WinApi.SetForegroundWindow(this.Handle);
         }
 
         public event EventHandler SearchEvent;
@@ -87,24 +68,24 @@ namespace FastTaskSwitcher
 
             var hWnd = ((ProcessInfo) this.listBox.SelectedItem).MainWindowHandle;
 
-            ShowWindow(hWnd, 9);
+            WinApi.ShowWindow(hWnd, 9);
 
-            if(hWnd == GetForegroundWindow())
+            if(hWnd == WinApi.GetForegroundWindow())
                 return;
 
-            IntPtr thread1 = GetCurrentThreadId();
+            IntPtr thread1 = WinApi.GetCurrentThreadId();
             IntPtr process2;
-            IntPtr thread2 = GetWindowThreadProcessId(hWnd, out process2);
+            IntPtr thread2 = WinApi.GetWindowThreadProcessId(hWnd, out process2);
 
             if (thread1 != thread2)
             {
-                AttachThreadInput(thread1, thread2, 1);
-                SetForegroundWindow(hWnd);
-                AttachThreadInput(thread1, thread2, 0);
+                WinApi.AttachThreadInput(thread1, thread2, 1);
+                WinApi.SetForegroundWindow(hWnd);
+                WinApi.AttachThreadInput(thread1, thread2, 0);
             }
             else
             {
-                SetForegroundWindow(hWnd);
+                WinApi.SetForegroundWindow(hWnd);
             }
 
             this.Close();

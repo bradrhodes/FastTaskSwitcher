@@ -15,7 +15,7 @@ namespace FastTaskSwitcher.Tests.Integration
             [TestMethod]
             public void ItShouldReturnAListOfAllRunningTasks()
             {
-                var taskListGetter = new TaskListGetter();
+                var taskListGetter = new EasierTaskListGetter();
 
                 var result = taskListGetter.GetTaskList();
 

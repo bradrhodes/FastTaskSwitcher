@@ -24,7 +24,9 @@ namespace FastTaskSwitcher
 
         public static void UnregisterHotKey(int id)
         {
-            _wnd.Invoke(new UnRegisterHotKeyDelegate(UnRegisterHotKeyInternal), _hwnd, id);
+            var del = new UnRegisterHotKeyDelegate(UnRegisterHotKeyInternal);
+
+            _wnd.Invoke(del, _hwnd, id);
         }
 
         delegate void RegisterHotKeyDelegate(IntPtr hwnd, int id, uint modifiers, uint key);

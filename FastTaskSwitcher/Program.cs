@@ -21,16 +21,14 @@ namespace FastTaskSwitcher
 
             using (SysTrayIcon stp = new SysTrayIcon(new ContextMenuBuilder(new ContextMenuItemFactory())))
             {
-                var hotKeyId = HotKeyManager.RegisterHotKey(Keys.Oemtilde, KeyModifiers.Alt);
-                HotKeyManager.HotKeyPressed += new EventHandler<HotKeyEventArgs>(stp.HotKeyEventCallback);
+//                var hotKeyId = HotKeyManager.RegisterHotKey(Keys.Oemtilde, KeyModifiers.Alt);
+//                HotKeyManager.HotKeyPressed += new EventHandler<HotKeyEventArgs>(stp.HotKeyEventCallback);
+
+//                HotKeyManager.UnregisterHotKey(hotKeyId);
 
                 stp.Display();
                 Application.Run();
-
-                HotKeyManager.UnregisterHotKey(hotKeyId);
             }
         }
-
-        
     }
 }

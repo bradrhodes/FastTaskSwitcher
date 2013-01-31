@@ -22,12 +22,12 @@ namespace FastTaskSwitcher
         private SysTrayIcon()
         {
             _ni = new NotifyIcon();
-            RegisterHotKey();
+            //RegisterHotKey();
         }
 
         public void Dispose()
         {
-            UnregisterHotKey();
+            //UnregisterHotKey();
             _ni.Dispose();
         }
 
@@ -48,7 +48,7 @@ namespace FastTaskSwitcher
         private void RegisterHotKey()
         {
             // Refactor: Make HotKeyManager non-static so that it can be injected here instead
-            _hotKeyId = HotKeyManager.RegisterHotKey(0x60, KeyModifiers.Alt | KeyModifiers.NoRepeat);
+            _hotKeyId = HotKeyManager.RegisterHotKey(0x60, KeyModifiers.Alt);
             HotKeyManager.HotKeyPressed += new EventHandler<HotKeyEventArgs>(HotKeyEventCallback);
         }
 
@@ -70,7 +70,7 @@ namespace FastTaskSwitcher
             }
         }
 
-        private void HotKeyEventCallback(object sender, HotKeyEventArgs e)
+        public void HotKeyEventCallback(object sender, HotKeyEventArgs e)
         {
             PopSearchForm();
         }

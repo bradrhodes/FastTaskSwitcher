@@ -1,9 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FastTaskSwitcher;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FastTaskSwitcher.Tests.Integration
 {
@@ -15,7 +10,7 @@ namespace FastTaskSwitcher.Tests.Integration
             [TestMethod]
             public void ItShouldReturnAListOfAllRunningTasks()
             {
-                var taskListGetter = new EasierTaskListGetter();
+                var taskListGetter = new TaskListGetter();
 
                 var result = taskListGetter.GetTaskList();
 

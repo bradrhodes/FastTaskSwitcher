@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
+using FastTaskSwitcher.ContextMenu;
 
 namespace FastTaskSwitcher
 {
@@ -19,13 +18,8 @@ namespace FastTaskSwitcher
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            using (SysTrayIcon stp = new SysTrayIcon(new ContextMenuBuilder(new ContextMenuItemFactory())))
+            using (var stp = new SysTrayIcon(new ContextMenuBuilder(new ContextMenuItemFactory())))
             {
-//                var hotKeyId = HotKeyManager.RegisterHotKey(Keys.Oemtilde, KeyModifiers.Alt);
-//                HotKeyManager.HotKeyPressed += new EventHandler<HotKeyEventArgs>(stp.HotKeyEventCallback);
-
-//                HotKeyManager.UnregisterHotKey(hotKeyId);
-
                 stp.Display();
                 Application.Run();
             }

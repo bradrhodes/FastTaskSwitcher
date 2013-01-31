@@ -121,4 +121,7 @@
   <data name="FTS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fts.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SysTrayIcon_Display_Fast_Task_Switcher">
+    <value xml:space="preserve">Fast Task Switcher</value>
+  </data>
 </root>

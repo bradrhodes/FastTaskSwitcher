@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using FastTaskSwitcher.ContextMenu;
 using FastTaskSwitcher.Properties;
 
 namespace FastTaskSwitcher
@@ -10,7 +8,7 @@ namespace FastTaskSwitcher
     class SysTrayIcon : IDisposable
     {
         private readonly IContextMenuBuilder _contextMenuBuilder;
-        private NotifyIcon _ni;
+        private readonly NotifyIcon _ni;
         private int _hotKeyId;
 
 
@@ -37,7 +35,7 @@ namespace FastTaskSwitcher
             _ni.MouseClick += new MouseEventHandler(niMouseClickCallback);
 
             _ni.Icon = Resources.FTS;
-            _ni.Text = "Fast Task Switcher";
+            _ni.Text = Resources.SysTrayIcon_Display_Fast_Task_Switcher;
             _ni.Visible = true;
 
             // Attach a context menu
@@ -62,15 +60,10 @@ namespace FastTaskSwitcher
             if (e.Button == MouseButtons.Left)
             {
                 PopSearchForm();
-
-
-                // Deprecated
-//                var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
-//                taskSearchForm.Show();
             }
         }
 
-        public void HotKeyEventCallback(object sender, HotKeyEventArgs e)
+        private void HotKeyEventCallback(object sender, HotKeyEventArgs e)
         {
             PopSearchForm();
         }
@@ -81,7 +74,7 @@ namespace FastTaskSwitcher
             var tsf = Application.OpenForms["TaskSearchForm"];
             if (tsf == null)
             {
-                var taskSearchForm = new TaskSearchForm(new EasierTaskListGetter());
+                var taskSearchForm = new TaskSearchForm(new TaskListGetter());
                 taskSearchForm.Show();
                 return;
             }

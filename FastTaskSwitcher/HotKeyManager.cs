@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace FastTaskSwitcher
 {
+    /// <summary>
+    /// Manages creation and destruction of hot keys.
+    /// This is slightly modified from the solution given by Chris Taylor on Stack Overflow: http://stackoverflow.com/questions/3654787/global-hotkey-in-console-application
+    /// </summary>
     public static class HotKeyManager
     {
         public static event EventHandler<HotKeyEventArgs> HotKeyPressed;
@@ -34,12 +37,12 @@ namespace FastTaskSwitcher
 
         private static void RegisterHotKeyInternal(IntPtr hwnd, int id, uint modifiers, uint key)
         {
-            RegisterHotKey(hwnd, id, modifiers, key);
+            WinApi.RegisterHotKey(hwnd, id, modifiers, key);
         }
 
         private static void UnRegisterHotKeyInternal(IntPtr hwnd, int id)
         {
-            UnregisterHotKey(_hwnd, id);
+            WinApi.UnregisterHotKey(_hwnd, id);
         }
 
         private static void OnHotKeyPressed(HotKeyEventArgs e)
@@ -92,13 +95,7 @@ namespace FastTaskSwitcher
 
             private const int WM_HOTKEY = 0x312;
         }
-
-        [DllImport("user32", SetLastError = true)]
-        private static extern bool RegisterHotKey(IntPtr hWnd, int id, uint fsModifiers, uint vk);
-
-        [DllImport("user32", SetLastError = true)]
-        private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
-
+        
         private static int _id = 0;
     }
 

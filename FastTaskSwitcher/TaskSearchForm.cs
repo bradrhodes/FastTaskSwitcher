@@ -1,26 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Windows.Forms;
 
 namespace FastTaskSwitcher
 {
-    public partial class TaskSearchForm : Form, ITaskSearchWindow
+    public partial class TaskSearchForm : Form, ITaskSearchForm
     {
         private readonly ITaskListGetter _taskListGetter;
-        private IList<ProcessInfo> _runningTasks;
-        private IList<ProcessInfo> _filteredRunningTasks; 
+        private IList<TaskInfo> _runningTasks;
+        private IList<TaskInfo> _filteredRunningTasks; 
 
         private TaskSearchForm()
         {
             InitializeComponent();
 
-            _runningTasks = new BindingList<ProcessInfo>();
+            _runningTasks = new BindingList<TaskInfo>();
             _filteredRunningTasks = _runningTasks.ToList();
             this.listBox.DataSource = _filteredRunningTasks;
 
@@ -49,11 +45,7 @@ namespace FastTaskSwitcher
             WinApi.SetForegroundWindow(this.Handle);
         }
 
-        public event EventHandler SearchEvent;
-        public event EventHandler TaskSwitchEvent;
-        public event EventHandler CancelEvent;
-
-        public string SearchText
+        private string SearchText
         {
             get { return this.searchBox.Text.Trim(); }
         }
@@ -66,7 +58,7 @@ namespace FastTaskSwitcher
                 return;
             }
 
-            var hWnd = ((ProcessInfo) this.listBox.SelectedItem).MainWindowHandle;
+            var hWnd = ((TaskInfo) this.listBox.SelectedItem).MainWindowHandle;
 
             WinApi.ShowWindow(hWnd, 9);
 
@@ -98,7 +90,6 @@ namespace FastTaskSwitcher
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-//            _filteredRunningTasks = _runningTasks.Where(x => x.MainWindowTitle.Contains(SearchText) /* | x.ProcessName.Contains(SearchText) Deprecated */).ToList(); // Deprecated
             // Case-insesitive search
             _filteredRunningTasks =
                 _runningTasks.Where(

@@ -66,5 +66,14 @@ namespace FastTaskSwitcher.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast Task Switcher.
+        /// </summary>
+        internal static string SysTrayIcon_Display_Fast_Task_Switcher {
+            get {
+                return ResourceManager.GetString("SysTrayIcon_Display_Fast_Task_Switcher", resourceCulture);
+            }
+        }
     }
 }

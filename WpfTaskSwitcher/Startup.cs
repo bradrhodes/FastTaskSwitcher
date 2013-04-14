@@ -12,10 +12,16 @@ namespace WpfTaskSwitcher
     {
         void App_Startup(object sender, StartupEventArgs e)
         {
+            // Create the container
             IContainer container = new DefaultContainer();
+
+            // Resolve the context, then store the container in the context so the container doesn't need to be passed
             var runningContext = container.Resolve<IRunningContext>();
+            runningContext.Container = container;
 
+            var mainWindow = new MainWindow(runningContext);
 
+            mainWindow.Show();
         }
     }
 }

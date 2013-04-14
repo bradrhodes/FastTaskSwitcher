@@ -9,7 +9,8 @@ namespace FastTaskSwitcher.Framework
     public interface IRunningContext
     {
         IList<TaskInfo> RunningTasks { get; }
-        IList<TaskInfo> FilteredRunningTasks { get; } 
+        IList<TaskInfo> FilteredRunningTasks { get; }
+        IContainer Container { get; set; }
     }
 
     /// <summary>
@@ -35,5 +36,7 @@ namespace FastTaskSwitcher.Framework
         {
             get { return _filteredRunningTasks; }
         }
+
+        public IContainer Container { get; set; }
     }
 }

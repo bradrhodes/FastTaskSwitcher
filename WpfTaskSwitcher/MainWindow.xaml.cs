@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FastTaskSwitcher.Framework;
 
 namespace WpfTaskSwitcher
 {
@@ -24,6 +25,13 @@ namespace WpfTaskSwitcher
         {
             InitializeComponent();
         }
+
+        public MainWindow(IRunningContext runningContext)
+        {
+            RunningContext = runningContext;
+        }
+
+        public IRunningContext RunningContext { get; set; }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {

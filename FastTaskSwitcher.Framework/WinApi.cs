@@ -7,7 +7,7 @@ namespace FastTaskSwitcher
     /// <summary>
     /// Makes calls to the Windows API
     /// </summary>
-    internal static class WinApi
+    public static class WinApi
     {
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -32,28 +32,28 @@ namespace FastTaskSwitcher
         internal static extern bool IsWindowVisible(IntPtr hWnd);
         
         [DllImport("user32.dll")]
-        internal static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         [DllImport("user32.dll")]
-        internal static extern IntPtr GetForegroundWindow();
+        public static extern IntPtr GetForegroundWindow();
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        internal static extern IntPtr GetWindowThreadProcessId(IntPtr hWnd, out IntPtr processId);
+        public static extern IntPtr GetWindowThreadProcessId(IntPtr hWnd, out IntPtr processId);
 
         [DllImport("user32.dll")]
-        internal static extern IntPtr AttachThreadInput(IntPtr idAttach, IntPtr idAttachTo, int fAttach);
+        public static extern IntPtr AttachThreadInput(IntPtr idAttach, IntPtr idAttachTo, int fAttach);
 
         [DllImport("Kernel32.dll")]
-        internal static extern IntPtr GetCurrentThreadId();
+        public static extern IntPtr GetCurrentThreadId();
 
         [DllImport("user32.dll")]
-        internal static extern bool SetForegroundWindow(IntPtr hWnd);
+        public static extern bool SetForegroundWindow(IntPtr hWnd);
 
         [DllImport("user32.dll")]
-        internal static extern bool RegisterHotKey(IntPtr hWnd, int id, uint fsModifiers, uint vk);
+        public static extern bool RegisterHotKey(IntPtr hWnd, int id, uint fsModifiers, uint vk);
 
         [DllImport("user32.dll")]
-        internal static extern bool UnregisterHotKey(IntPtr hWnd, int id);
+        public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
         private enum WindowLong
         {

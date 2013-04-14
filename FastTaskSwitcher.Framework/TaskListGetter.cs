@@ -4,12 +4,7 @@ using System.Text;
 
 namespace FastTaskSwitcher
 {
-    public interface ITaskListGetter
-    {
-        IEnumerable<TaskInfo> GetTaskList();
-    }
-
-    class TaskListGetter : ITaskListGetter
+    public class TaskListGetter : ITaskListGetter
     {
         private readonly IList<TaskInfo> _taskList;
 

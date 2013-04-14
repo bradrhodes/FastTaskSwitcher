@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher.Framework"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher.Framework.Tests", "FastTaskSwitcher.Framework.Tests\FastTaskSwitcher.Framework.Tests.csproj", "{76497413-1709-48B9-AEE9-6BE2699B36C5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6DB3F2B5-68E1-415C-ADB2-A89050617136}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FC3998F5-6144-4B29-9C57-71A1EEAF8A10}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe

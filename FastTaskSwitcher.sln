@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher", "FastTaskSwitcher\FastTaskSwitcher.csproj", "{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher.Tests", "FastTaskSwitcher.Tests\FastTaskSwitcher.Tests.csproj", "{3C09960B-7550-47D4-8126-8D31CFAEF5EA}"
@@ -13,6 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher.Tests.Integration", "FastTaskSwitcher.Tests.Integration\FastTaskSwitcher.Tests.Integration.csproj", "{5FD9D964-A673-446E-B028-C1621150BB37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6DB3F2B5-68E1-415C-ADB2-A89050617136}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution

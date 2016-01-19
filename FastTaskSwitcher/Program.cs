@@ -21,7 +21,7 @@ namespace FastTaskSwitcher
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            using (var stp = new SysTrayIcon(new ContextMenuBuilder(new ContextMenuItemFactory()), PopWindow, Resources.FTS, Resources.SysTrayIcon_Display_Fast_Task_Switcher))
+            using (var stp = new SysTrayIcon(new ContextMenuBuilder(), PopWindow, Resources.FTS, Resources.SysTrayIcon_Display_Fast_Task_Switcher))
             {
                 stp.Display();
                 Application.Run();

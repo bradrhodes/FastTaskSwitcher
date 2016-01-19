@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContextMenu\ExitContextMenuItem.cs" />
     <Compile Include="ContextMenu\IContextMenuBuilder.cs" />
+    <Compile Include="ContextMenu\IContextMenuItem.cs" />
     <Compile Include="HotKeyManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SysTrayIcon.cs" />

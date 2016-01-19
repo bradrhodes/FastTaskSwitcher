@@ -1,8 +1,7 @@
 using System;
 using System.Windows.Forms;
-using FastTaskSwitcher.Core.ContextMenu;
 
-namespace FastTaskSwitcher.ContextMenu
+namespace FastTaskSwitcher.Core.ContextMenu
 {
     class ExitContextMenuItem : IContextMenuItem
     {

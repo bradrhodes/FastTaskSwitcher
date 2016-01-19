@@ -20,7 +20,7 @@ namespace FastTaskSwitcher.Core
         {
             if (popWindow == null) throw new ArgumentNullException("popWindow");
             if (icon == null) throw new ArgumentNullException("icon");
-            _contextMenuBuilder = contextMenuBuilder;
+            _contextMenuBuilder = new DefaultContextMenuBuilder(contextMenuBuilder);
             _popWindow = popWindow;
             _icon = icon;
             _text = text;

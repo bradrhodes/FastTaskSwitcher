@@ -72,7 +72,6 @@
     <Compile Include="TaskSearchForm.Designer.cs">
       <DependentUpon>TaskSearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinApi.cs" />
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -104,7 +103,12 @@
   <ItemGroup>
     <Content Include="Images\FTS.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FastTaskSwitcher.Core\FastTaskSwitcher.Core.csproj">
+      <Project>{33f67745-caac-4772-a1c7-3d93a311c42c}</Project>
+      <Name>FastTaskSwitcher.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

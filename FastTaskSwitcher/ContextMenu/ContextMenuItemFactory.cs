@@ -1,8 +1,9 @@
 using System;
+using FastTaskSwitcher.Core.ContextMenu;
 
 namespace FastTaskSwitcher.ContextMenu
 {
-    class ContextMenuItemFactory : IContextMenuItemFactory
+    public class ContextMenuItemFactory : IContextMenuItemFactory
     {
         public IContextMenuItem GetMenuItem(string menuItemName)
         {

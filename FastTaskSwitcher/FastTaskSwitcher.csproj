@@ -47,7 +47,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutBox.cs">
@@ -57,10 +56,9 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="ContextMenu\AboutContextMenuItem.cs" />
-    <Compile Include="ContextMenu\ExitContextMenuItem.cs" />
     <Compile Include="ContextMenu\ContextMenuBuilder.cs" />
     <Compile Include="ContextMenu\ContextMenuItemFactory.cs" />
-    <Compile Include="ContextMenu\IContextMenuBuilder.cs" />
+    <Compile Include="ContextMenu\ExitContextMenuItem.cs" />
     <Compile Include="ContextMenu\IContextMenuItem.cs" />
     <Compile Include="ContextMenu\IContextMenuItemFactory.cs" />
     <Compile Include="ITaskSearchForm.cs" />

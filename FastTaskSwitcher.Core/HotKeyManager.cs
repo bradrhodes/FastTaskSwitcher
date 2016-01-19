@@ -1,7 +1,6 @@
 using System;
 using System.Threading;
 using System.Windows.Forms;
-using System.Windows.Input;
 
 namespace FastTaskSwitcher.Core
 {
@@ -13,7 +12,7 @@ namespace FastTaskSwitcher.Core
     {
         public static event EventHandler<HotKeyEventArgs> HotKeyPressed;
 
-        public static int RegisterHotKey(Key key, KeyModifiers modifiers)
+        public static int RegisterHotKey(Keys key, KeyModifiers modifiers)
         {
             return RegisterHotKey((uint) key, modifiers);
         }

@@ -1,9 +1,10 @@
 using System;
 using System.Windows.Forms;
+using FastTaskSwitcher.Core.ContextMenu;
 
 namespace FastTaskSwitcher.ContextMenu
 {
-    class ContextMenuBuilder : IContextMenuBuilder
+    public class ContextMenuBuilder : IContextMenuBuilder
     {
         private readonly IContextMenuItemFactory _contextMenuItemFactory;
 

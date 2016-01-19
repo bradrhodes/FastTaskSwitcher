@@ -46,7 +46,7 @@ namespace FastTaskSwitcher
         private void RegisterHotKey()
         {
             // Refactor: Make HotKeyManager non-static so that it can be injected here instead
-            _hotKeyId = HotKeyManager.RegisterHotKey(Keys.Oemtilde, KeyModifiers.Alt);
+            _hotKeyId = HotKeyManager.RegisterHotKey(Keys.Oemtilde, KeyModifiers.Control);
             HotKeyManager.HotKeyPressed += new EventHandler<HotKeyEventArgs>(HotKeyEventCallback);
         }
 

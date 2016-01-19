@@ -97,5 +97,16 @@ namespace FastTaskSwitcher
 
             this.listBox.DataSource = _filteredRunningTasks;
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

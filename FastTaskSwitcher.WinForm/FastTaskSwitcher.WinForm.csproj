@@ -8,8 +8,8 @@
     <ProjectGuid>{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FastTaskSwitcher</RootNamespace>
-    <AssemblyName>FastTaskSwitcher</AssemblyName>
+    <RootNamespace>FastTaskSwitcher.WinForm</RootNamespace>
+    <AssemblyName>FastTaskSwitcher.WinForm</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -96,7 +96,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\FTS.ico" />
+    <EmbeddedResource Include="Images\FTS.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FastTaskSwitcher.Core\FastTaskSwitcher.Core.csproj">

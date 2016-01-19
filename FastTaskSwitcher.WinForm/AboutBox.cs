@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace FastTaskSwitcher
+namespace FastTaskSwitcher.WinForm
 {
     public partial class AboutBox : Form
     {

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
-using FastTaskSwitcher.ContextMenu;
 using FastTaskSwitcher.Core;
-using FastTaskSwitcher.Core.ContextMenu;
-using FastTaskSwitcher.Properties;
+using FastTaskSwitcher.WinForm.ContextMenu;
+using FastTaskSwitcher.WinForm.Properties;
 
-namespace FastTaskSwitcher
+namespace FastTaskSwitcher.WinForm
 {
     static class Program
     {

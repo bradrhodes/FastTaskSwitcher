@@ -58,9 +58,9 @@
       <Project>{33f67745-caac-4772-a1c7-3d93a311c42c}</Project>
       <Name>FastTaskSwitcher.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FastTaskSwitcher\FastTaskSwitcher.csproj">
+    <ProjectReference Include="..\FastTaskSwitcher.WinForm\FastTaskSwitcher.WinForm.csproj">
       <Project>{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}</Project>
-      <Name>FastTaskSwitcher</Name>
+      <Name>FastTaskSwitcher.WinForm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

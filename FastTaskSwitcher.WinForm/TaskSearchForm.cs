@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using FastTaskSwitcher.Core;
 
-namespace FastTaskSwitcher
+namespace FastTaskSwitcher.WinForm
 {
     public partial class TaskSearchForm : Form, ITaskSearchForm
     {

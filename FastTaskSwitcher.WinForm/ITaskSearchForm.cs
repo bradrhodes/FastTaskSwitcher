@@ -1,4 +1,4 @@
-namespace FastTaskSwitcher
+namespace FastTaskSwitcher.WinForm
 {
     public interface ITaskSearchForm
     {

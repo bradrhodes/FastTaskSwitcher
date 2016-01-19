@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher", "FastTaskSwitcher\FastTaskSwitcher.csproj", "{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher.WinForm", "FastTaskSwitcher.WinForm\FastTaskSwitcher.WinForm.csproj", "{0905F23E-3F99-4DBE-AFFB-59AF21B2FF16}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastTaskSwitcher.Tests", "FastTaskSwitcher.Tests\FastTaskSwitcher.Tests.csproj", "{3C09960B-7550-47D4-8126-8D31CFAEF5EA}"
 EndProject

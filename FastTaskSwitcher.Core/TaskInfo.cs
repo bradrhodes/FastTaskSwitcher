@@ -1,6 +1,6 @@
 using System;
 
-namespace FastTaskSwitcher
+namespace FastTaskSwitcher.Core
 {
     public class TaskInfo
     {

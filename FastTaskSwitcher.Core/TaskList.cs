@@ -1,16 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using FastTaskSwitcher.Core;
 
-namespace FastTaskSwitcher
+namespace FastTaskSwitcher.Core
 {
     public interface ITaskListGetter
     {
         IEnumerable<TaskInfo> GetTaskList();
     }
 
-    class TaskListGetter : ITaskListGetter
+    public class TaskListGetter : ITaskListGetter
     {
         private readonly IList<TaskInfo> _taskList;
 

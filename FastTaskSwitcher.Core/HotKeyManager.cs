@@ -1,19 +1,19 @@
-﻿using System;
-using System.Windows.Forms;
+using System;
 using System.Threading;
-using FastTaskSwitcher.Core;
+using System.Windows.Forms;
+using System.Windows.Input;
 
-namespace FastTaskSwitcher
+namespace FastTaskSwitcher.Core
 {
     /// <summary>
     /// Manages creation and destruction of hot keys.
-    /// This is slightly modified from the solution given by Chris Taylor on Stack Overflow: http://stackoverflow.com/questions/3654787/global-hotkey-in-console-application
+    /// This is slightly modified from the solution given by Chris Taylor on Stack Overflow:http://stackoverflow.com/questions/3654787/global-hotkey-in-console-application
     /// </summary>
     public static class HotKeyManager
     {
         public static event EventHandler<HotKeyEventArgs> HotKeyPressed;
 
-        public static int RegisterHotKey(Keys key, KeyModifiers modifiers)
+        public static int RegisterHotKey(Key key, KeyModifiers modifiers)
         {
             return RegisterHotKey((uint) key, modifiers);
         }

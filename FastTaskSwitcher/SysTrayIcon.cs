@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Windows.Input;
 using FastTaskSwitcher.ContextMenu;
+using FastTaskSwitcher.Core;
 using FastTaskSwitcher.Properties;
 
 namespace FastTaskSwitcher
@@ -46,7 +48,7 @@ namespace FastTaskSwitcher
         private void RegisterHotKey()
         {
             // Refactor: Make HotKeyManager non-static so that it can be injected here instead
-            _hotKeyId = HotKeyManager.RegisterHotKey(Keys.Oemtilde, KeyModifiers.Control);
+            _hotKeyId = HotKeyManager.RegisterHotKey(Key.OemTilde, KeyModifiers.Control);
             HotKeyManager.HotKeyPressed += new EventHandler<HotKeyEventArgs>(HotKeyEventCallback);
         }
 

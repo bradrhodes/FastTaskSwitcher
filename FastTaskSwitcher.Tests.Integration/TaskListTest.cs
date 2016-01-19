@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FastTaskSwitcher.Core;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FastTaskSwitcher.Tests.Integration
 {
